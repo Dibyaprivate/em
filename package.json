@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev -H 127.0.0.1 -p 5173",
-    "build": "next build",
-    "start": "next start -H 127.0.0.1 -p 5173",
-    "lint": "eslint"
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "4.15.0",
@@ -27,4 +28,5 @@
     "typescript": "^5.0.0"
   }
 }
+
 
